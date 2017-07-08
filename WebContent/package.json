@@ -1,0 +1,28 @@
+{
+  "name": "openui5-compiler",
+  "version": "1.0.0",
+  "description": "OpenUI5 compiler",
+  "author": "Enric Castella Gonzalez - e_castella@hotmail.com",
+  "private": true,
+  "scripts": {
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-jshint":"*",
+    "gulp-concat":"*",
+    "gulp-rename":"*",
+    "gulp-uglify":"*",
+    "gulp-tap":"*",
+    "writefile":"*",
+    "gulp-ui5-preload":"*",
+    "gulp-pretty-data":"*",
+    "gulp-minify":"*",
+    "gulp-if":"*",
+    "gulp-prettify":"*",
+    "path":"*",
+    "gulp-replace":"*",
+    "del":"*",
+    "gulp-series":"*",
+    "gulp-rimraf":"*"
+  }
+}
