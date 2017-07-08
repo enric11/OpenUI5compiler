@@ -1,5 +1,9 @@
 # OpenUI5compiler
-Compress UI5 project using gulp
+Minify UI5 project using gulp.
+
+This project based on [zoby/gulp-openui5-preload](https://github.com/zoby/gulp-openui5-preload) adding new task to generate a minify js. 
+
+The benefit of generating the preload component with these new tasks is the prompting of the js files and allows a faster loading of the application.
 
 * [1. Installation](https://github.com/enric11/OpenUI5compiler/wiki/1.--Installation)
 
