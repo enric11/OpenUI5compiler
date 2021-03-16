@@ -67,7 +67,7 @@ gulp.task('1compres', function() {
 });
 
 gulp.task(
-	    '2ui5preloadCompresed',['1compres'],
+	    '2ui5preloadCompresed', gulp.series('1compres'),
 	     function() {
 	    	return gulp.src(
 	                [
@@ -93,16 +93,16 @@ gulp.task(
 	    }
 	);
 
-gulp.task('3prepareComponentPreload',['2ui5preloadCompresed'], function(){
+gulp.task('3prepareComponentPreload', gulp.series('2ui5preloadCompresed'), function(){
 	return gulp.src(['Component-preload.js'])
 	    .pipe(replace('/distTmp/', '/'))
 	    .pipe(gulp.dest('.'));
 	  
 	});
 
-gulp.task('4deleteCleanDist',['3prepareComponentPreload'], function(){
+gulp.task('4deleteCleanDist', gulp.series('3prepareComponentPreload'), function(){
 	return del('./distTmp', {force:true});
 });
 
 
-gulp.task('default', ['1compres','2ui5preloadCompresed','3prepareComponentPreload','4deleteCleanDist']);
+gulp.task('default', gulp.series('1compres','2ui5preloadCompresed','3prepareComponentPreload','4deleteCleanDist'));
